@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    hotels:
+      title: Hotels
+  admin:
+    hotels:
+      index:
+        create_new: Lag en ny Hotel
+        reorder: Endre rekkefølgen på Hotels
+        reorder_done: Ferdig å endre rekkefølgen Hotels
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Hotels enda. Klikk på "Lag en ny Hotel" for å legge til din første hotel.
+      hotel:
+        view_live: Vis hvordan denne hotel ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne hotel
+        delete: Fjern denne hotel permanent
+  hotels:
+    show:
+      other: Andre Hotels

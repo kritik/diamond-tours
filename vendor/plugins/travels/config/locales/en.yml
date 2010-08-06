@@ -1,0 +1,19 @@
+en:
+  plugins:
+    travels:
+      title: Travels
+  admin:
+    travels:
+      index:
+        create_new: Create a new Travel
+        reorder: Reorder Travels
+        reorder_done: Done Reordering Travels
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Travels yet. Click "Create a new Travel" to add your first travel.
+      travel:
+        view_live: View this travel live <br/><em>(opens in a new window)</em>
+        edit: Edit this travel
+        delete: Remove this travel forever
+  travels:
+    show:
+      other: Other Travels

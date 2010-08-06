@@ -2,8 +2,8 @@ source :rubygems
 
 # Specify the database driver as appropriate for your application (only one is necessary).
 # Defaults to sqlite3. Don't remove any of these below in the core or gems won't install.
-gem 'sqlite3-ruby', :require => 'sqlite3' #db_adapter=sqlite3
-# gem 'mysql', :require => 'mysql' #db_adapter=mysql
+#gem 'sqlite3-ruby', :require => 'sqlite3' #db_adapter=sqlite3
+gem 'mysql', :require => 'mysql' #db_adapter=mysql
 # gem 'pg' #db_adapter=postgresql
 
 # Specify your favourite web server (only one) - not required.

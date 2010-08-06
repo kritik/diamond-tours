@@ -1,0 +1,40 @@
+<% content_for :body_content_title do %>
+  <%= @hotel.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%= @hotel.title %>
+  </div>
+  
+  <div>
+    <h3>Resort</h3>
+    <%= @hotel.resort_id %>
+  </div>
+  
+  <div>
+    <h3>Stars</h3>
+    <%= @hotel.stars %>
+  </div>
+  
+  <div>
+    <h3>Description</h3>
+    <%= @hotel.description %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="hotels">
+    <% @hotels.each do |hotel| %>
+      <li>
+        <%= link_to hotel.title, hotel_url(hotel) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

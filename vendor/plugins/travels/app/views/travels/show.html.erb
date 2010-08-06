@@ -1,0 +1,125 @@
+<% content_for :body_content_title do %>
+  <%= @travel.hotel_id %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Hotel</h3>
+    <%= @travel.hotel_id %>
+  </div>
+  
+  <div>
+    <h3>Page</h3>
+    <%= @travel.page_id %>
+  </div>
+  
+  <div>
+    <h3>Date</h3>
+    <%= @travel.date %>
+  </div>
+  
+  <div>
+    <h3>Fdate</h3>
+    <%= @travel.fdate %>
+  </div>
+  
+  <div>
+    <h3>Ftype</h3>
+    <%= @travel.ftype %>
+  </div>
+  
+  <div>
+    <h3>Rtype</h3>
+    <%= @travel.rtype %>
+  </div>
+  
+  <div>
+    <h3>City</h3>
+    <%= @travel.city %>
+  </div>
+  
+  <div>
+    <h3>Ttype</h3>
+    <%= @travel.ttype %>
+  </div>
+  
+  <div>
+    <h3>Days</h3>
+    <%= @travel.days %>
+  </div>
+  
+  <div>
+    <h3>Nights</h3>
+    <%= @travel.nights %>
+  </div>
+  
+  <div>
+    <h3>Price</h3>
+    <%= @travel.price %>
+  </div>
+  
+  <div>
+    <h3>Currency</h3>
+    <%= @travel.currency_id %>
+  </div>
+  
+  <div>
+    <h3>Com</h3>
+    <%= @travel.com %>
+  </div>
+  
+  <div>
+    <h3>Section</h3>
+    <%= @travel.section_id %>
+  </div>
+  
+  <div>
+    <h3>Pdate</h3>
+    <%= @travel.pdate %>
+  </div>
+  
+  <div>
+    <h3>Source</h3>
+    <%= @travel.source %>
+  </div>
+  
+  <div>
+    <h3>Pocket</h3>
+    <%= @travel.pocket_id %>
+  </div>
+  
+  <div>
+    <h3>Pocket People</h3>
+    <%= @travel.pocket_people %>
+  </div>
+  
+  <div>
+    <h3>Active</h3>
+    <%= @travel.active %>
+  </div>
+  
+  <div>
+    <h3>Avia</h3>
+    <%= @travel.avia %>
+  </div>
+  
+  <div>
+    <h3>Hotels</h3>
+    <%= @travel.hotels %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="travels">
+    <% @travels.each do |travel| %>
+      <li>
+        <%= link_to travel.hotel_id, travel_url(travel) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

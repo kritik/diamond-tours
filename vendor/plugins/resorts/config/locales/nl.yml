@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    resorts:
+      title: Resorts
+  admin:
+    resorts:
+      index:
+        create_new: Maak een nieuwe Resort
+        reorder: Wijzig de volgorde van de Resorts
+        reorder_done: Klaar met het wijzingen van de volgorde van de Resorts
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Resorts. Druk op 'Maak een nieuwe Resort' om de eerste aan te maken.
+      resort:
+        view_live: Bekijk deze resort op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze resort
+        delete: Verwijder deze resort voor eeuwig
+  resorts:
+    show:
+      other: Andere Resorts

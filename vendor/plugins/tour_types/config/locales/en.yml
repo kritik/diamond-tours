@@ -1,0 +1,19 @@
+en:
+  plugins:
+    tour_types:
+      title: Tour Types
+  admin:
+    tour_types:
+      index:
+        create_new: Create a new Tour Type
+        reorder: Reorder Tour Types
+        reorder_done: Done Reordering Tour Types
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Tour Types yet. Click "Create a new Tour Type" to add your first tour type.
+      tour_type:
+        view_live: View this tour type live <br/><em>(opens in a new window)</em>
+        edit: Edit this tour type
+        delete: Remove this tour type forever
+  tour_types:
+    show:
+      other: Other Tour Types

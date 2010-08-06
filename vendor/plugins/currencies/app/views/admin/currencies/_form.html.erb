@@ -1,0 +1,20 @@
+<% form_for [:admin, @currency] do |f| -%>
+  <%= f.error_messages %>
+  
+  <div class='field'>
+    <%= f.label :currency -%>
+    <%= f.text_field :currency, :class => 'larger' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :exchange -%>
+    <%= f.text_field :exchange -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.currencies.currency.delete')
+              } %>
+<% end -%>

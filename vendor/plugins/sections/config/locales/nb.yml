@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    sections:
+      title: Sections
+  admin:
+    sections:
+      index:
+        create_new: Lag en ny Section
+        reorder: Endre rekkefølgen på Sections
+        reorder_done: Ferdig å endre rekkefølgen Sections
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Sections enda. Klikk på "Lag en ny Section" for å legge til din første section.
+      section:
+        view_live: Vis hvordan denne section ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne section
+        delete: Fjern denne section permanent
+  sections:
+    show:
+      other: Andre Sections

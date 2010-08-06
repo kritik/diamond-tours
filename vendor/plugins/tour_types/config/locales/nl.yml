@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    tour_types:
+      title: Tour Types
+  admin:
+    tour_types:
+      index:
+        create_new: Maak een nieuwe Tour Type
+        reorder: Wijzig de volgorde van de Tour Types
+        reorder_done: Klaar met het wijzingen van de volgorde van de Tour Types
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Tour Types. Druk op 'Maak een nieuwe Tour Type' om de eerste aan te maken.
+      tour_type:
+        view_live: Bekijk deze tour type op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze tour type
+        delete: Verwijder deze tour type voor eeuwig
+  tour_types:
+    show:
+      other: Andere Tour Types

@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    tour_types:
+      title: Tour Types
+  admin:
+    tour_types:
+      index:
+        create_new: Lag en ny Tour Type
+        reorder: Endre rekkefølgen på Tour Types
+        reorder_done: Ferdig å endre rekkefølgen Tour Types
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Tour Types enda. Klikk på "Lag en ny Tour Type" for å legge til din første tour type.
+      tour_type:
+        view_live: Vis hvordan denne tour type ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne tour type
+        delete: Fjern denne tour type permanent
+  tour_types:
+    show:
+      other: Andre Tour Types

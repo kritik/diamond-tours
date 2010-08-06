@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="travels">
+    <% @travels.each do |travel| %>
+      <li>
+        <%= link_to travel.hotel_id, travel_url(travel) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

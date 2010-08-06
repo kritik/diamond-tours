@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    countries:
+      title: Countries
+  admin:
+    countries:
+      index:
+        create_new: Maak een nieuwe Country
+        reorder: Wijzig de volgorde van de Countries
+        reorder_done: Klaar met het wijzingen van de volgorde van de Countries
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Countries. Druk op 'Maak een nieuwe Country' om de eerste aan te maken.
+      country:
+        view_live: Bekijk deze country op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze country
+        delete: Verwijder deze country voor eeuwig
+  countries:
+    show:
+      other: Andere Countries

@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    sections:
+      title: Sections
+  admin:
+    sections:
+      index:
+        create_new: Maak een nieuwe Section
+        reorder: Wijzig de volgorde van de Sections
+        reorder_done: Klaar met het wijzingen van de volgorde van de Sections
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Sections. Druk op 'Maak een nieuwe Section' om de eerste aan te maken.
+      section:
+        view_live: Bekijk deze section op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze section
+        delete: Verwijder deze section voor eeuwig
+  sections:
+    show:
+      other: Andere Sections

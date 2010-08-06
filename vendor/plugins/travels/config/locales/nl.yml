@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    travels:
+      title: Travels
+  admin:
+    travels:
+      index:
+        create_new: Maak een nieuwe Travel
+        reorder: Wijzig de volgorde van de Travels
+        reorder_done: Klaar met het wijzingen van de volgorde van de Travels
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Travels. Druk op 'Maak een nieuwe Travel' om de eerste aan te maken.
+      travel:
+        view_live: Bekijk deze travel op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze travel
+        delete: Verwijder deze travel voor eeuwig
+  travels:
+    show:
+      other: Andere Travels

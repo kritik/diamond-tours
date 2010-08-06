@@ -1,0 +1,35 @@
+<% content_for :body_content_title do %>
+  <%= @country.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%= @country.title %>
+  </div>
+  
+  <div>
+    <h3>Description</h3>
+    <%= @country.description %>
+  </div>
+  
+  <div>
+    <h3>Extension</h3>
+    <%= @country.extension %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="countries">
+    <% @countries.each do |country| %>
+      <li>
+        <%= link_to country.title, country_url(country) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

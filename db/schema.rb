@@ -1,4 +1,4 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file,
+# This file is auto-generated from the current state of the database. Instead of editing this file, 
 # please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
@@ -9,7 +9,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100729221735) do
+ActiveRecord::Schema.define(:version => 20100806105505) do
+
+  create_table "countries", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "extension"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "countries", ["id"], :name => "index_countries_on_id"
+
+  create_table "currencies", :force => true do |t|
+    t.string   "currency"
+    t.decimal  "exchange",   :precision => 6, :scale => 4
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "currencies", ["id"], :name => "index_currencies_on_id"
+
+  create_table "hotels", :force => true do |t|
+    t.string   "title"
+    t.integer  "resort_id"
+    t.string   "stars"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hotels", ["id"], :name => "index_hotels_on_id"
 
   create_table "images", :force => true do |t|
     t.integer  "parent_id"
@@ -45,6 +78,16 @@ ActiveRecord::Schema.define(:version => 20100729221735) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "news_items", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "publish_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "news_items", ["id"], :name => "index_news_items_on_id"
 
   create_table "page_parts", :force => true do |t|
     t.integer  "page_id"
@@ -94,6 +137,20 @@ ActiveRecord::Schema.define(:version => 20100729221735) do
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
 
+  create_table "resorts", :force => true do |t|
+    t.string   "title"
+    t.integer  "currency_id"
+    t.integer  "tour_type_id"
+    t.integer  "country_id"
+    t.integer  "weathher_id"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "resorts", ["id"], :name => "index_resorts_on_id"
+
   create_table "resources", :force => true do |t|
     t.string   "content_type"
     t.string   "filename"
@@ -112,6 +169,16 @@ ActiveRecord::Schema.define(:version => 20100729221735) do
     t.integer "role_id"
   end
 
+  create_table "sections", :force => true do |t|
+    t.string   "title"
+    t.integer  "resort_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sections", ["id"], :name => "index_sections_on_id"
+
   create_table "slugs", :force => true do |t|
     t.string   "name"
     t.integer  "sluggable_id"
@@ -123,6 +190,44 @@ ActiveRecord::Schema.define(:version => 20100729221735) do
 
   add_index "slugs", ["name", "sluggable_type", "scope", "sequence"], :name => "index_slugs_on_name_and_sluggable_type_and_scope_and_sequence", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
+
+  create_table "tour_types", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tour_types", ["id"], :name => "index_tour_types_on_id"
+
+  create_table "travels", :force => true do |t|
+    t.integer  "hotel_id"
+    t.integer  "page_id"
+    t.date     "date"
+    t.date     "fdate"
+    t.string   "ftype"
+    t.string   "rtype"
+    t.string   "city"
+    t.string   "ttype"
+    t.integer  "days"
+    t.integer  "nights"
+    t.integer  "price",         :limit => 10, :precision => 10, :scale => 0
+    t.integer  "currency_id"
+    t.string   "com"
+    t.integer  "section_id"
+    t.date     "pdate"
+    t.string   "source"
+    t.integer  "pocket_id"
+    t.integer  "pocket_people"
+    t.boolean  "active"
+    t.integer  "avia"
+    t.integer  "hotels"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "travels", ["id"], :name => "index_travels_on_id"
 
   create_table "user_plugins", :force => true do |t|
     t.integer "user_id"

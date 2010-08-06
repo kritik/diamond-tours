@@ -1,0 +1,19 @@
+en:
+  plugins:
+    resorts:
+      title: Resorts
+  admin:
+    resorts:
+      index:
+        create_new: Create a new Resort
+        reorder: Reorder Resorts
+        reorder_done: Done Reordering Resorts
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Resorts yet. Click "Create a new Resort" to add your first resort.
+      resort:
+        view_live: View this resort live <br/><em>(opens in a new window)</em>
+        edit: Edit this resort
+        delete: Remove this resort forever
+  resorts:
+    show:
+      other: Other Resorts

@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="countries">
+    <% @countries.each do |country| %>
+      <li>
+        <%= link_to country.title, country_url(country) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

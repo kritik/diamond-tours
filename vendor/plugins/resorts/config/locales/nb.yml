@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    resorts:
+      title: Resorts
+  admin:
+    resorts:
+      index:
+        create_new: Lag en ny Resort
+        reorder: Endre rekkefølgen på Resorts
+        reorder_done: Ferdig å endre rekkefølgen Resorts
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Resorts enda. Klikk på "Lag en ny Resort" for å legge til din første resort.
+      resort:
+        view_live: Vis hvordan denne resort ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne resort
+        delete: Fjern denne resort permanent
+  resorts:
+    show:
+      other: Andre Resorts

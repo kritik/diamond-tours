@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    travels:
+      title: Travels
+  admin:
+    travels:
+      index:
+        create_new: Lag en ny Travel
+        reorder: Endre rekkefølgen på Travels
+        reorder_done: Ferdig å endre rekkefølgen Travels
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Travels enda. Klikk på "Lag en ny Travel" for å legge til din første travel.
+      travel:
+        view_live: Vis hvordan denne travel ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne travel
+        delete: Fjern denne travel permanent
+  travels:
+    show:
+      other: Andre Travels

@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    countries:
+      title: Countries
+  admin:
+    countries:
+      index:
+        create_new: Lag en ny Country
+        reorder: Endre rekkefølgen på Countries
+        reorder_done: Ferdig å endre rekkefølgen Countries
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Countries enda. Klikk på "Lag en ny Country" for å legge til din første country.
+      country:
+        view_live: Vis hvordan denne country ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne country
+        delete: Fjern denne country permanent
+  countries:
+    show:
+      other: Andre Countries

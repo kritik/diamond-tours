@@ -282,7 +282,7 @@ body.login .fieldWithErrors input.larger {
   border: 1px solid red;
 }
 #header_content {
-  height: 60px;
+  height: 75px;
   position: relative;
   margin-bottom: 0px;
 }

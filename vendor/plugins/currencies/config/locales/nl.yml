@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    currencies:
+      title: Currencies
+  admin:
+    currencies:
+      index:
+        create_new: Maak een nieuwe Currency
+        reorder: Wijzig de volgorde van de Currencies
+        reorder_done: Klaar met het wijzingen van de volgorde van de Currencies
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Currencies. Druk op 'Maak een nieuwe Currency' om de eerste aan te maken.
+      currency:
+        view_live: Bekijk deze currency op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze currency
+        delete: Verwijder deze currency voor eeuwig
+  currencies:
+    show:
+      other: Andere Currencies

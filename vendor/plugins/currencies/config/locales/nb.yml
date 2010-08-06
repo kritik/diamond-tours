@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    currencies:
+      title: Currencies
+  admin:
+    currencies:
+      index:
+        create_new: Lag en ny Currency
+        reorder: Endre rekkefølgen på Currencies
+        reorder_done: Ferdig å endre rekkefølgen Currencies
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Currencies enda. Klikk på "Lag en ny Currency" for å legge til din første currency.
+      currency:
+        view_live: Vis hvordan denne currency ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne currency
+        delete: Fjern denne currency permanent
+  currencies:
+    show:
+      other: Andre Currencies

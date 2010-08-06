@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    hotels:
+      title: Hotels
+  admin:
+    hotels:
+      index:
+        create_new: Maak een nieuwe Hotel
+        reorder: Wijzig de volgorde van de Hotels
+        reorder_done: Klaar met het wijzingen van de volgorde van de Hotels
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Hotels. Druk op 'Maak een nieuwe Hotel' om de eerste aan te maken.
+      hotel:
+        view_live: Bekijk deze hotel op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze hotel
+        delete: Verwijder deze hotel voor eeuwig
+  hotels:
+    show:
+      other: Andere Hotels
