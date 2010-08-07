@@ -2,6 +2,8 @@ class Travel < ActiveRecord::Base
 
   acts_as_indexed :fields => [:ftype, :rtype, :city, :ttype, :com, :source]
 
+  named_scope :allowed, :conditions =>{:online => 1}
+
   validates_presence_of :hotel_id
   validates_uniqueness_of :hotel_id
 

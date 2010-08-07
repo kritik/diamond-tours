@@ -1,5 +1,5 @@
 class Refinery::ApplicationController < ActionController::Base
-
+  before_filter :force_utf8_params
   helper_method :home_page?, :local_request?, :just_installed?, :from_dialog?, :admin?, :login?
   protect_from_forgery # See ActionController::RequestForgeryProtection
 
@@ -10,6 +10,23 @@ class Refinery::ApplicationController < ActionController::Base
   after_filter :store_current_location!, :if => Proc.new {|c| c.send(:refinery_user?) }
 
   rescue_from ActiveRecord::RecordNotFound, ActionController::UnknownAction, ActionView::MissingTemplate, :with => :error_404
+
+  def force_utf8_params
+    traverse = lambda do |object, block|
+      if object.kind_of?(Hash)
+        object.each_value { |o| traverse.call(o, block) }
+      elsif object.kind_of?(Array)
+        object.each { |o| traverse.call(o, block) }
+      else
+        block.call(object)
+      end
+      object
+    end
+    force_encoding = lambda do |o|
+      o.force_encoding(Encoding::UTF_8) if o.respond_to?(:force_encoding)
+    end
+    traverse.call(params, force_encoding)
+  end
 
   def admin?
     controller_name =~ %r{^admin/}

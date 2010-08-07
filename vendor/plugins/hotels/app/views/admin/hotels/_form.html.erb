@@ -1,0 +1,30 @@
+<% form_for [:admin, @hotel] do |f| -%>
+  <%= f.error_messages %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :resort_id -%>
+    <%= f.collection_select :resort_id, Resort.all, :id, :title -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :stars -%>
+    <%= f.text_field :stars -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :description -%>
+    <%= f.text_area :description, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.hotels.hotel.delete')
+              } %>
+<% end -%>

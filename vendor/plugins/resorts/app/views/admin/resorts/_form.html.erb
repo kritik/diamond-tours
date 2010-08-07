@@ -1,0 +1,40 @@
+<% form_for [:admin, @resort] do |f| -%>
+  <%= f.error_messages %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :currency_id -%>
+    <%= f.collection_select :currency_id, Currency.all, :id, :currency -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :tour_type_id -%>
+    <%= f.collection_select :tour_type_id, TourType.all, :id, :name -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :country_id -%>
+    <%= f.collection_select :country_id, Country.all, :id, :title -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :weather_id -%>
+    <%= f.text_field :weather_id -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :description -%>
+    <%= f.text_area :description, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => true,
+                :delete_title => t('admin.resorts.resort.delete')
+              } %>
+<% end -%>

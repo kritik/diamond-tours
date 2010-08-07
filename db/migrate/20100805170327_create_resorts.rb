@@ -6,7 +6,7 @@ class CreateResorts < ActiveRecord::Migration
       t.integer :currency_id
       t.integer :tour_type_id
       t.integer :country_id
-      t.integer :weathher_id
+      t.integer :weather_id
       t.text :description
       t.integer :position
 

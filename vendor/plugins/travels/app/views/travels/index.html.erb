@@ -1,11 +1,92 @@
 <% content_for :body_content_left do %>
-  <ul id="travels">
-    <% @travels.each do |travel| %>
-      <li>
-        <%= link_to travel.hotel_id, travel_url(travel) %>
-      </li>
-    <% end %>
-  </ul>
+  <% form_tag travels_path, :method=>:get do -%>
+    <table cellspacing="1" cellpadding="3" border="0">
+    <tbody>
+      <tr>
+        <td class="table_title" colspan="2"><%= label :_search, :hotel_resort_id_is, "Направление" %></td>
+        <td class="table_title"><%=  label :_search, :currency_id, "Валюта" %></td>
+       </tr>
+       <tr>
+        <td colspan="2">
+          <%= grouped_collection_select :_search, :hotel_resort_id_is, @directions,:resorts,:title, :id, :title, { :include_blank => true,:selected=>@selected[:hotel_resort_id_is].to_i } -%>
+        </td>
+        <td>
+          <%= collection_select :_attr, :currency_id, @currencies, :id, :currency, { :include_blank => true, :selected => @attr[:currency_id] } -%>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+    <div id="online_data">
+      <table cellspacing="1" cellpadding="3" border="0">
+        <tbody>
+          <tr>
+                  <td class="table_title">дата Выезда</td>
+                  <td class="table_title">Тур</td>
+                  <td class="table_title">Длительность</td>
+          </tr>
+          <tr>
+                  <td>
+                    <%= select :_search, :date_is, @dates, { :include_blank => true, :selected=>@selected[:date_is].to_s } -%>
+                  </td>
+                  <td>
+                    <%= collection_select :_search, :section_id_is, @sections, :id, :title, { :include_blank => true,:selected=>@selected[:section_id_is].to_i } %>
+                  </td>
+                  <td>
+                    <%= select :_search, :nights_is, @durations, { :include_blank => true,:selected=>@selected[:nights_is].to_i } %>
+                  </td>
+          </tr>
+          <tr>
+                  <!--<td class="table_title">Размещение</td>-->
+                  <td class="table_title">Категория (zvezdi)</td>
+                  <td class="table_title">Питание</td>
+          </tr>
+          <tr>
+                  <!--<td>
+                    <%#=  %>
+                  </td>-->
+                  <td>
+                    <%= collection_select :_search, :hotel_stars_is, @hotels, :stars, :stars, { :include_blank => true,:selected=>@selected[:hotel_stars_is] } %>
+                  </td>
+                  <td>
+                    <%= select :_search, :rtype_is, @feedings, { :include_blank => true,:selected=>@selected[:rtype_is] } %>
+                  </td>
+          </tr>
+          <tr>
+                  <td class="table_title" colspan="2">Отель </td>
+                  <td class="table_title">Тип номера </td>
+          </tr>
+          <tr>
+                  <td colspan="2">
+                    <%= collection_select :_search, :hotel_id_is, @hotels, :id, :title, { :include_blank => true,:selected=>@selected[:hotel_id_is].to_i } %>
+                  </td>
+                  <td>
+                    <%= select :_search, :ftype_is, @room_types, { :include_blank => true ,:selected=>@selected[:ftype_is] } %>
+                  </td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Search" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+  <% if @travels_s.any? %>
+    <%= will_paginate @travels_s, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+    <ul id="travels">
+      <% @travels_s.each do |travel| %>
+        <li>
+          <%= link_to travel.hotel_id, travel_url(travel) %>
+        </li>
+      <% end %>
+    </ul>
+    <%= will_paginate @travels_s, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+  <% else %>
+    <p>
+      <strong>
+        <%= t('.no_items_yet') %>
+      </strong>
+    </p>
+  <% end %>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
