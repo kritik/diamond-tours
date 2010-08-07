@@ -1,0 +1,117 @@
+<% form_for [:admin, @travel] do |f| -%>
+  <%= f.error_messages %>
+  
+  <div class='field'>
+    <%= f.label :hotel_id -%>
+    <%#= f.text_field :hotel_id, :class => 'larger' -%>
+    <%= f.grouped_collection_select :hotel_id, Country.all,:resorts,:title, :id, :title -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :page_id -%>
+    <%= f.text_field :page_id -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :date -%>
+    <%= f.date_select :date -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :fdate -%>
+    <%= f.date_select :fdate -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ftype, "Тип номера" -%>
+    <%= f.text_field :ftype -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :rtype, "Питание" -%>
+    <%= f.text_field :rtype -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :city -%>
+    <%= f.text_field :city -%>
+  </div>
+  <!--
+  <div class='field'>
+    <%= f.label :ttype -%>
+    <%= f.text_field :ttype -%>
+  </div>
+  -->
+  
+  <div class='field'>
+    <%= f.label :days -%>
+    <%= f.text_field :days -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :nights -%>
+    <%= f.text_field :nights -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.text_field :price -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :currency_id, "Валюта" -%>
+    <%= f.collection_select :currency_id, Currency.all, :id, :currency -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :com -%>
+    <%= f.text_field :com -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :section_id, "Тур" -%>
+    <%= f.collection_select :section_id, Section.all, :id, :title -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :pdate -%>
+    <%= f.date_select :pdate -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :source -%>
+    <%= f.text_field :source -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :pocket_id -%>
+    <%= f.text_field :pocket_id -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :pocket_people -%>
+    <%= f.text_field :pocket_people -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :active -%>
+    <%= f.check_box :active -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :avia -%>
+    <%= f.text_field :avia -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :hotels -%>
+    <%= f.text_field :hotels -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.travels.travel.delete')
+              } %>
+<% end -%>

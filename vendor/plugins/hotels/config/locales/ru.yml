@@ -1,0 +1,19 @@
+ru:
+  plugins:
+    hotels:
+      title: Hotels
+  admin:
+    hotels:
+      index:
+        create_new: Create a new Hotel
+        reorder: Reorder Hotels
+        reorder_done: Done Reordering Hotels
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Hotels yet. Click "Create a new Hotel" to add your first hotel.
+      hotel:
+        view_live: View this hotel live <br/><em>(opens in a new window)</em>
+        edit: Edit this hotel
+        delete: Remove this hotel forever
+  hotels:
+    show:
+      other: Other Hotels

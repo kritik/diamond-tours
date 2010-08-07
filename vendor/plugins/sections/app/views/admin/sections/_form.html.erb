@@ -1,0 +1,20 @@
+<% form_for [:admin, @section] do |f| -%>
+  <%= f.error_messages %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :resort_id -%>
+    <%= f.collection_select :resort_id, Resort.all, :id, :title -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => true,
+                :delete_title => t('admin.sections.section.delete')
+              } %>
+<% end -%>

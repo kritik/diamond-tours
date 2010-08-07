@@ -3,7 +3,7 @@ source :rubygems
 # Specify the database driver as appropriate for your application (only one is necessary).
 # Defaults to sqlite3. Don't remove any of these below in the core or gems won't install.
 #gem 'sqlite3-ruby', :require => 'sqlite3' #db_adapter=sqlite3
-gem 'mysql', :require => 'mysql' #db_adapter=mysql
+gem 'mysql2', :require => 'mysql2'#, :db_adapter=>:mysql
 # gem 'pg' #db_adapter=postgresql
 
 # Specify your favourite web server (only one) - not required.
@@ -24,6 +24,7 @@ gem 'rails',           '= 2.3.8'
 gem 'rmagick',         '~> 2.12.0'
 gem 'truncate_html',   '= 0.3.2', :require => 'truncate_html'
 gem 'will_paginate',   '= 2.3.14', :require => 'will_paginate'
+gem 'searchlogic'
 
 group :test do
   gem 'json_pure', :require => 'json/pure', :git => 'git://github.com/parndt/json.git', :branch => 'master'

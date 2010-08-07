@@ -1,0 +1,19 @@
+ru:
+  plugins:
+    countries:
+      title: Countries
+  admin:
+    countries:
+      index:
+        create_new: Create a new Country
+        reorder: Reorder Countries
+        reorder_done: Done Reordering Countries
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Countries yet. Click "Create a new Country" to add your first country.
+      country:
+        view_live: View this country live <br/><em>(opens in a new window)</em>
+        edit: Edit this country
+        delete: Remove this country forever
+  countries:
+    show:
+      other: Other Countries

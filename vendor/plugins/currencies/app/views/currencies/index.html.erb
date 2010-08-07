@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="currencies">
+    <% @currencies.each do |currency| %>
+      <li>
+        <%= link_to currency.currency, currency_url(currency) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
