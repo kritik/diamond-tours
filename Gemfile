@@ -24,7 +24,8 @@ gem 'rails',           '= 2.3.8'
 gem 'rmagick',         '~> 2.12.0'
 gem 'truncate_html',   '= 0.3.2', :require => 'truncate_html'
 gem 'will_paginate',   '= 2.3.14', :require => 'will_paginate'
-gem 'searchlogic'
+gem 'searchlogic',	'= 2.4.23'
+gem 'fcgi'
 
 group :test do
   gem 'json_pure', :require => 'json/pure', :git => 'git://github.com/parndt/json.git', :branch => 'master'
