@@ -104,6 +104,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl
+  factory_girl
   fcgi
   friendly_id (= 3.0.6)
   gherkin
