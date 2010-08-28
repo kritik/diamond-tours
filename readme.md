@@ -42,6 +42,41 @@ Mac OS 10.5+ users [this shell install script](http://github.com/maddox/magick-i
 * [Update Refinery to the latest version](http://tutorials.refinerycms.org/tutorials/how-to-update-refinery-to-the-latest-version)
 * [Install Refinery on Heroku](http://tutorials.refinerycms.org/tutorials/how-to-install-refinery-on-heroku)
 * [Run the Refinery test suite](http://tutorials.refinerycms.org/tutorials/how-to-test-refinery)
+## Installing and Setting Up Refinery
+
+### 1. Get the Refinery code
+
+#### Install the Gem
+
+    gem install refinerycms
+    refinery path/to/project
+
+#### Or, clone Refinery's GIT repository
+
+    git clone git://github.com/resolve/refinerycms.git mynewsite.com
+    cd ./mynewsite.com
+    git remote rm origin
+    git remote add origin git@github.com:you/yournewsite.git
+    mv ./config/database.yml.example ./config/database.yml
+
+### 2. Configuration
+
+Firstly, edit ``config/database.yml`` to reflect your database server details.
+
+Next create your database and fill it with Refinery's default data:
+
+    rake db:setup
+
+After your database exists, you'll need to install the gems that Refinery depends on. You can do this by running:
+
+    rake gems:install
+
+Note: The news engine that was previously in Refinery's core was extracted into a separate gem / plugin to be found here:p
+
+    http://github.com/resolve/refinerycms-news
+
+Now, news should be up and running.
+
 
 ## Help and Documentation
 
